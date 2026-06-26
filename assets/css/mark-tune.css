@@ -1,1 +1,1 @@
-.hero:before,.page-hero:before{right:4vw!important;top:24%!important;width:min(28vw,340px)!important;height:42%!important;opacity:.055!important}.hero .container,.page-hero .container{max-width:1160px}@media(max-width:900px){.hero:before,.page-hero:before{display:none!important}}
+body{--mark-hidden:1}.hero:before,.page-hero:before{opacity:0!important}
