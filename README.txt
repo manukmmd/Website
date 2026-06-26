@@ -2,7 +2,6 @@ Upload the contents of this folder into the root of the GitHub repo manukmmd/Web
 
 Important:
 - Keep the folder structure.
-- The logo file must end up at: assets/logos/mm-brand-mark.png
-- The CSS file must end up at: assets/css/mark-tune.css
+- The image must end up at: assets/images/final/design-visualisation.jpg
 
-The CSS update has already been pushed, so the main missing piece is the PNG file.
+The homepage and projects page have already been updated to use this file.
