@@ -1,8 +1,6 @@
-Upload the contents of this folder into the root of the GitHub repo manukmmd/Website.
+Upload this file to replace the current KUKA image used on the MM Design website.
 
-Important:
-- Keep the folder structure.
-- Replace the existing file at:
-  assets/images/final/sculptural-feature-build.jpg
+Path:
+assets/images/final/kuka-foam.jpg
 
-The homepage has already been updated to treat this as a normal landscape image.
+This keeps the same filename so the existing homepage and projects page will automatically show the updated KUKA image.
