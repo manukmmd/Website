@@ -378,7 +378,7 @@ body{background:var(--ivory)}
 
 /* Clean, transparent photographic flowers: no rectangular navy image backing. */
 .hero-florals::before,.hero-florals::after{
-  background-image:url("floral-clean-transparent.svg")!important;
+  background-image:url("floral-clean-transparent.svg?v=3")!important;
   background-color:transparent!important;
   background-repeat:no-repeat!important;
   background-size:contain!important;
