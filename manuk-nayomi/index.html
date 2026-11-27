@@ -12,9 +12,39 @@
   <link rel="icon" href="florals.svg" type="image/svg+xml">
   <link rel="stylesheet" href="wedding.css?v=3">
   <script defer src="wedding.js"></script>
+  <script defer src="invite-demo.js?v=1"></script>
 </head>
-<body>
+<body class="invitation-preview-locked">
   <a class="skip-link" href="#main">Skip to content</a>
+  <div class="invite-gate" id="invite-gate" role="dialog" aria-modal="true" aria-labelledby="pin-title">
+    <div class="gate-flowers gate-flowers-top" aria-hidden="true"></div>
+    <div class="gate-panel">
+      <div class="gate-brand">Manuk <em>&amp;</em> Nayomi</div>
+      <div class="gate-rule" aria-hidden="true">✦</div>
+      <div id="pin-entry">
+        <p class="gate-kicker">A personal invitation</p>
+        <h2 id="pin-title">You're <em>invited.</em></h2>
+        <p class="gate-description">Enter the six digit PIN from your invitation to see your personal welcome.</p>
+        <form id="invite-pin-form" autocomplete="off">
+          <label for="invite-pin">Your invitation PIN</label>
+          <input id="invite-pin" name="invite_pin" type="text" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" placeholder="● ● ● ● ● ●" aria-describedby="pin-help" required>
+          <button type="submit" class="button button-champagne gate-button">Open my invitation</button>
+          <p class="gate-error" id="pin-error" role="alert" aria-live="polite"></p>
+        </form>
+        <div class="gate-demo" id="pin-help"><strong>Preview with sample guests</strong><p>These are fictional examples, not real guest PINs.</p><div class="demo-pin-options"><button type="button" data-demo-pin="270301">Individual · 270301</button><button type="button" data-demo-pin="270302">Couple · 270302</button><button type="button" data-demo-pin="270303">Family · 270303</button></div></div>
+      </div>
+      <div id="pin-welcome" hidden>
+        <p class="gate-kicker">You're invited to celebrate with us</p>
+        <h2 id="guest-greeting" tabindex="-1"></h2>
+        <p id="guest-people" class="gate-people"></p>
+        <p class="gate-description">We're so excited to share our wedding day with you.</p>
+        <p class="gate-date">Sunday, 7 March 2027 · Sydney</p>
+        <button type="button" id="enter-wedding" class="button button-champagne gate-button">Explore our wedding website</button>
+      </div>
+      <p class="gate-footnote">Wedding preview · Sample invitations only · Responses are not yet being collected</p>
+    </div>
+    <div class="gate-flowers gate-flowers-bottom" aria-hidden="true"></div>
+  </div>
   <header class="topbar" id="top">
     <a class="brand" href="#top" aria-label="Manuk and Nayomi, back to top"><span class="brand-mark">Manuk <em>&amp;</em> Nayomi</span></a>
     <nav class="nav-links" aria-label="Wedding navigation">
@@ -46,6 +76,11 @@
         <p class="hero-intro">We’re getting married and would love for you to celebrate with us.</p>
         <a class="button button-champagne hero-button" href="#rsvp">RSVP</a>
       </div>
+    </section>
+    <section id="personal-invitation" class="personal-invitation" hidden aria-live="polite">
+      <div><p class="kicker">Your personal invitation</p><h2 id="personal-invite-title"></h2><p id="personal-invite-members"></p></div>
+      <a class="button button-navy" href="#rsvp">Preview your RSVP</a>
+      <button class="invitation-switch" id="switch-invitation" type="button">Try another sample PIN</button>
     </section>
     <nav class="quick-links" aria-label="Quick wedding links">
       <a href="#the-day"><svg aria-hidden="true" viewBox="0 0 32 32"><circle cx="11" cy="17" r="7"/><circle cx="21" cy="17" r="7"/><path d="M21 8l3-4 3 4-3 3z"/></svg><span>Our Wedding</span></a>
@@ -137,9 +172,10 @@
         <p>We can't wait to celebrate together. Please use the names on your invitation when completing your response.</p>
       </div>
       <div class="rsvp-panel">
+        <p id="invitation-rsvp-note" class="invitation-rsvp-note" hidden></p>
         <div class="rsvp-notice" id="rsvp-notice" role="status">
           <span class="notice-icon" aria-hidden="true">✧</span>
-          <div><strong>RSVP responses aren't open just yet.</strong><p>The form is ready to preview. Secure submission and the RSVP deadline will be activated once confirmed. Nothing entered here is sent or saved.</p></div>
+          <div><strong>RSVP responses aren't open just yet.</strong><p>The form is ready to preview. Secure submission and the RSVP deadline will be activated once confirmed. Nothing entered here is sent or saved. Please use sample details only.</p></div>
         </div>
         <form id="wedding-rsvp" novalidate autocomplete="on">
           <fieldset class="form-group">
@@ -160,6 +196,11 @@
           <div id="attending-details" hidden>
             <fieldset class="form-group">
               <legend>02 <span>Who's joining us?</span></legend>
+              <div class="invite-attendees" id="invite-attendees" hidden>
+                <p class="field-label">Who from your invitation can attend?</p>
+                <p class="hint">Untick anyone who can't make it. You can respond for your whole invitation together.</p>
+                <div id="invited-people-choices"></div>
+              </div>
               <div class="field">
                 <label for="guest-list">Names of all adults attending <span class="required">*</span></label>
                 <textarea id="guest-list" name="adult_guest_names" rows="3" maxlength="1000" placeholder="One full name per line, including yourself"></textarea>
@@ -221,7 +262,9 @@
             </div>
           </fieldset>
           <div class="form-actions">
+            <button type="button" id="preview-rsvp" class="button button-outline preview-rsvp" disabled>Preview RSVP details</button>
             <button type="submit" id="rsvp-submit" class="button button-navy" disabled>RSVP opening soon <span aria-hidden="true">↗</span></button>
+            <div id="rsvp-preview-result" class="rsvp-preview-result" hidden aria-live="polite"></div>
             <p class="form-private"><span aria-hidden="true">✧</span> Guest information will be collected privately. No guest list is published on this site.</p>
           </div>
           <p class="form-feedback" id="form-feedback" role="status" aria-live="polite"></p>
