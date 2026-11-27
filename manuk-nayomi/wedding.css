@@ -361,3 +361,17 @@ body{background:var(--ivory)}
   .hero-florals::before{width:195px!important;height:172px!important}
   .hero-florals::after{width:195px!important;height:172px!important}
 }
+
+/* Keep decorative blooms clear of names on narrow screens. */
+.hero-florals::before,.hero-florals::after{
+  -webkit-mask-image:linear-gradient(135deg,#000 0%,#000 57%,transparent 94%);
+  mask-image:linear-gradient(135deg,#000 0%,#000 57%,transparent 94%);
+}
+.hero-florals::before{width:157px!important;height:139px!important;left:-17px!important;top:-12px!important}
+.hero-florals::after{width:157px!important;height:139px!important;right:-17px!important;bottom:-12px!important}
+@media(min-width:600px){
+  .hero-florals::before,.hero-florals::after{width:245px!important;height:217px!important}
+}
+@media(min-width:900px){
+  .hero-florals::before,.hero-florals::after{width:325px!important;height:288px!important}
+}
