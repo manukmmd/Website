@@ -9,21 +9,21 @@
   "use strict";
 
   const samples = Object.freeze({
-    "270301": {
+    "0327701": {
       id: "demo-individual",
       title: "Fiona",
       label: "Fiona Ellis",
       adults: ["Fiona Ellis"],
       children: []
     },
-    "270302": {
+    "0327702": {
       id: "demo-couple",
       title: "Alex & Jamie",
       label: "Alex & Jamie Morgan",
       adults: ["Alex Morgan", "Jamie Morgan"],
       children: []
     },
-    "270303": {
+    "0327703": {
       id: "demo-family",
       title: "Jordan, Casey & family",
       label: "The Lee Family",
@@ -101,7 +101,7 @@
   }
 
   function readPin(raw) {
-    const pin = String(raw || "").replace(/\D/g, "").slice(0, 6);
+    const pin = String(raw || "").replace(/\D/g, "").slice(0, 7);
     pinInput.value = pin;
     const invitation = samples[pin];
     if (!invitation) {
@@ -131,7 +131,7 @@
   });
 
   pinInput.addEventListener("input", () => {
-    pinInput.value = pinInput.value.replace(/\D/g, "").slice(0, 6);
+    pinInput.value = pinInput.value.replace(/\D/g, "").slice(0, 7);
     pinError.textContent = "";
     pinInput.removeAttribute("aria-invalid");
   });
