@@ -12,7 +12,7 @@
   <link rel="icon" href="florals.svg" type="image/svg+xml">
   <link rel="stylesheet" href="wedding.css?v=4">
   <script defer src="wedding.js"></script>
-  <script defer src="invite-demo.js?v=1"></script>
+  <script defer src="invite-demo.js?v=2"></script>
 </head>
 <body class="invitation-preview-locked">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -24,14 +24,14 @@
       <div id="pin-entry">
         <p class="gate-kicker">A personal invitation</p>
         <h2 id="pin-title">You're <em>invited.</em></h2>
-        <p class="gate-description">Enter the six digit PIN from your invitation to see your personal welcome.</p>
+        <p class="gate-description">Enter the seven digit PIN from your invitation to see your personal welcome.</p>
         <form id="invite-pin-form" autocomplete="off">
           <label for="invite-pin">Your invitation PIN</label>
-          <input id="invite-pin" name="invite_pin" type="text" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" placeholder="● ● ● ● ● ●" aria-describedby="pin-help" required>
+          <input id="invite-pin" name="invite_pin" type="text" inputmode="numeric" pattern="[0-9]{7}" maxlength="7" placeholder="● ● ● ● ● ● ●" aria-describedby="pin-help" required>
           <button type="submit" class="button button-champagne gate-button">Open my invitation</button>
           <p class="gate-error" id="pin-error" role="alert" aria-live="polite"></p>
         </form>
-        <div class="gate-demo" id="pin-help"><strong>Preview with sample guests</strong><p>These are fictional examples, not real guest PINs.</p><div class="demo-pin-options"><button type="button" data-demo-pin="270301">Individual · 270301</button><button type="button" data-demo-pin="270302">Couple · 270302</button><button type="button" data-demo-pin="270303">Family · 270303</button></div></div>
+        <div class="gate-demo" id="pin-help"><strong>Preview with sample guests</strong><p>These are fictional examples, not real guest PINs.</p><div class="demo-pin-options"><button type="button" data-demo-pin="0327701">Individual · 0327701</button><button type="button" data-demo-pin="0327702">Couple · 0327702</button><button type="button" data-demo-pin="0327703">Family · 0327703</button></div></div>
       </div>
       <div id="pin-welcome" hidden>
         <p class="gate-kicker">You're invited to celebrate with us</p>
