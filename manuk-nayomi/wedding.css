@@ -333,3 +333,31 @@ body{background:var(--ivory)}
   .hero{padding-left:24px!important;padding-right:24px!important}
 }
 @media(prefers-reduced-motion:reduce){.quick-links a,.day-summary a{transition:none}}
+
+/* Photo-real wedding flowers: white orchids, peach roses and muted foliage.
+   A locally embedded image keeps this section independent of third-party hosts. */
+.hero{background:#12263e!important}
+.hero-florals::before,.hero-florals::after{
+  background-image:url("floral-photographic.svg")!important;
+  background-position:center!important;
+  background-repeat:no-repeat!important;
+  background-size:100% 100%!important;
+  opacity:1!important;
+  filter:drop-shadow(0 8px 12px rgba(0,0,0,.12));
+}
+.hero-florals::before{left:-20px!important;top:-12px!important;width:230px!important;height:204px!important;transform:none!important}
+.hero-florals::after{right:-21px!important;bottom:-12px!important;width:230px!important;height:204px!important;transform:rotate(180deg)!important}
+.welcome::before{display:none!important}
+.photo-slot::before{background:none!important;opacity:0!important}
+@media(min-width:600px){
+  .hero-florals::before{width:290px!important;height:257px!important;left:-18px!important;top:-10px!important}
+  .hero-florals::after{width:290px!important;height:257px!important;right:-16px!important;bottom:-10px!important}
+}
+@media(min-width:900px){
+  .hero-florals::before{width:340px!important;height:300px!important;left:-24px!important;top:-14px!important}
+  .hero-florals::after{width:340px!important;height:300px!important;right:-22px!important;bottom:-14px!important}
+}
+@media(max-width:359px){
+  .hero-florals::before{width:195px!important;height:172px!important}
+  .hero-florals::after{width:195px!important;height:172px!important}
+}
