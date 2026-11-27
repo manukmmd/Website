@@ -190,3 +190,146 @@ details[open] summary span{transform:rotate(45deg)}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
 
 .rsvp-success{padding:46px 24px;text-align:center;font:400 26px/1.4 var(--serif);color:var(--navy);background:#f4efe5;border:1px solid #cfb997}
+
+
+/* Approved navy, ivory, gold and apricot website direction.
+   No harbour or Opera House background images. Mobile first. */
+:root{
+  --navy:#10223a;
+  --deep:#0d1c30;
+  --gold:#ad813f;
+  --gold-light:#f0c98e;
+  --cream:#fbf3eb;
+  --ivory:#fff9f2;
+}
+body{background:var(--ivory)}
+.topbar{background:rgba(255,249,242,.97);border-bottom-color:#e7d7c8;height:66px;padding:0 17px}
+.topbar .brand{align-items:flex-start;gap:0;flex:none}
+.topbar .brand-mark{font:italic 400 clamp(21px,4.6vw,29px)/1.15 var(--serif);letter-spacing:-.035em;white-space:nowrap}
+.topbar .brand-mark em{font-weight:400;color:#b57d36;letter-spacing:-.03em;padding:0 2px}
+.topbar .nav-links a{font-size:11px;letter-spacing:.06em;color:#142338}
+.topbar .nav-links a:hover{color:#9b6b35}
+.nav-mobile-actions{display:flex;align-items:center;gap:12px}
+.nav-rsvp{border:1px solid #b58b51;background:transparent;color:#16243a;padding:8px 13px;font-size:11px;letter-spacing:.08em}
+.mobile-menu{position:relative;display:block}
+.mobile-menu summary{width:34px;height:38px;cursor:pointer;display:flex;flex-direction:column;gap:5px;justify-content:center;align-items:center;list-style:none}
+.mobile-menu summary::-webkit-details-marker{display:none}
+.mobile-menu summary span{width:19px;height:1.5px;background:#15263d;display:block}
+.mobile-menu nav{position:absolute;right:-7px;top:48px;width:min(280px,calc(100vw - 32px));padding:10px;background:#fff8f0;box-shadow:0 12px 35px rgba(12,29,48,.16);border:1px solid #d9c19d;display:flex;flex-direction:column;z-index:50}
+.mobile-menu nav a{color:#16243a;text-decoration:none;padding:11px 14px;border-bottom:1px solid #e9dfd2;font-size:13px}
+.mobile-menu nav a:last-child{border-bottom:0}
+.hero{
+  display:flex!important;align-items:center;justify-content:center;
+  background:radial-gradient(ellipse at 55% 45%,#223953 0%,#142b45 40%,#0d1d31 100%)!important;
+  position:relative;isolation:isolate;overflow:hidden;
+  min-height:525px;padding:85px 35px 83px!important;text-align:center
+}
+.hero::before,.hero::after{
+  content:"";position:absolute;pointer-events:none;z-index:2;
+  background:none!important;opacity:1!important;width:auto;height:auto;right:17px;left:17px;top:17px;bottom:17px;
+  border:1px solid #c79c5a
+}
+.hero::after{inset:23px;border-color:rgba(227,189,119,.66)}
+.hero-florals{position:absolute;inset:0;pointer-events:none;z-index:3}
+.hero-florals::before,.hero-florals::after{
+  content:"";position:absolute;pointer-events:none;background-repeat:no-repeat;background-position:center;background-size:contain;opacity:.98;
+}
+.hero-florals::before{
+  top:0;left:-27px;width:230px;height:285px;background-image:url("floral-upper.svg");transform:scaleX(-1)
+}
+.hero-florals::after{
+  bottom:-15px;right:-21px;width:236px;height:250px;background-image:url("floral-lower.svg");transform:scaleX(-1)
+}
+.hero-inner{position:relative;z-index:4;max-width:810px;width:100%;margin:0 auto}
+.hero-overline{
+  color:#f4d1a2;font-size:10px;letter-spacing:.31em;text-transform:uppercase;
+  font-weight:800;margin:0 0 27px;line-height:1.6
+}
+.hero .wedding-hero-title{
+  color:#fffaf3;font:italic 400 clamp(38px,9.3vw,87px)/1.15 var(--serif)!important;
+  letter-spacing:-.048em;margin:0 auto!important;white-space:normal;display:block;
+  text-shadow:0 1px 8px rgba(0,0,0,.13)
+}
+.hero .wedding-hero-title em{font-style:italic;color:#e6ae65;letter-spacing:0;font-size:.92em}
+.hero-gold-divider{display:block;color:#e7ba75;font-size:15px;line-height:1;margin:22px auto 13px}
+.hero-date-full{color:#f8f3ee;letter-spacing:.22em;font-size:11px;font-weight:700;text-transform:uppercase;margin:0}
+.hero .hero-place{color:#f7ece4;font-size:10px;letter-spacing:.25em;margin:11px 0 23px;text-transform:uppercase}
+.hero .hero-intro{color:#f9f4ed;font:italic 17px/1.6 var(--serif);max-width:360px;margin:0 auto 26px}
+.hero .hero-button{
+  background:linear-gradient(105deg,#f7e0b6,#eec391)!important;color:#15243c!important;
+  font-size:12px;letter-spacing:.24em;min-width:139px;min-height:47px;margin:0;
+  border:1px solid #ffe3ad;box-shadow:0 4px 16px rgba(0,0,0,.1)
+}
+.quick-links{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));background:#fff9f2;border-bottom:1px solid #ecdcd0;border-top:1px solid #d4b188}
+.quick-links a{text-decoration:none;text-align:center;padding:18px 5px 15px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:6px;color:#15253e;min-width:0;border-right:1px solid #dfc6ac}
+.quick-links a:last-child{border-right:0}
+.quick-links svg{width:28px;height:28px;fill:none;stroke:#b77d3e;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.quick-links span{font-size:10px;line-height:1.35;font-weight:750;letter-spacing:.02em}
+.quick-links a:hover{background:#f8eddf}
+.welcome{background:#fff8f1!important;padding:78px 23px 66px;overflow:hidden}
+.welcome::before{
+  content:"";position:absolute;right:-36px;top:-22px;width:172px;height:230px;
+  background:url("floral-upper.svg") center/contain no-repeat;opacity:.62;pointer-events:none
+}
+.welcome .narrow{position:relative;z-index:1}
+.welcome h2{color:#152740}
+.welcome .signature{color:#a96c36}
+.day-summary{
+  background:#11263e;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  padding:28px 15px;gap:0;color:#f7f5f0
+}
+.day-summary a{min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;text-decoration:none;padding:19px 11px;border-right:1px solid rgba(226,191,135,.37);border-bottom:1px solid rgba(226,191,135,.21);gap:6px}
+.day-summary a:nth-child(2n){border-right:0}
+.day-summary a:nth-last-child(-n+2){border-bottom:0}
+.day-summary a:hover{background:#1e3753}
+.day-summary .summary-symbol{font:400 27px/1 var(--serif);color:#e3b76f;height:31px}
+.day-summary strong{font-size:10px;letter-spacing:.14em;text-transform:uppercase;line-height:1.4}
+.day-summary span:last-child{font-size:11px;color:#e7e7e4;line-height:1.5;max-width:210px}
+.section-ivory{background:#fbf6f0!important}
+.day-card-feature{border-color:#e1c7a8}
+.day-card-soon{background:#f4e5d9}
+.section-head .kicker,.welcome .kicker,.rsvp-heading .kicker{color:#946b43}
+.rsvp-panel{border-color:#d7b58a}
+@media(min-width:600px){
+  .hero{min-height:570px;padding:110px 80px!important}
+  .hero::before{inset:25px}.hero::after{inset:32px}
+  .hero-florals::before{width:330px;height:360px;left:-18px;top:-10px}
+  .hero-florals::after{width:320px;height:330px;right:-13px;bottom:-5px}
+  .hero .wedding-hero-title{font-size:clamp(54px,8vw,85px)!important}
+  .hero-overline{font-size:11px}
+  .hero-date-full{font-size:12px}
+  .hero .hero-intro{font-size:19px}
+  .quick-links{padding:0 8%;}.quick-links a{padding:22px 12px 20px}
+  .quick-links svg{height:33px;width:33px}.quick-links span{font-size:12px}
+  .day-summary{padding:26px 6%}
+}
+@media(min-width:900px){
+  .topbar{height:77px;padding:0 6%}
+  .topbar .brand-mark{font-size:30px}
+  .topbar .nav-links{display:flex!important;gap:30px}
+  .nav-mobile-actions{display:none}
+  .hero{min-height:660px;padding:115px 125px!important}
+  .hero::before{inset:32px}.hero::after{inset:39px}
+  .hero-florals::before{width:405px;height:455px;top:-10px;left:-24px}
+  .hero-florals::after{width:390px;height:400px;bottom:-18px;right:-28px}
+  .hero-inner{padding-top:2px}
+  .hero .wedding-hero-title{font-size:clamp(72px,6.8vw,104px)!important}
+  .hero .hero-intro{max-width:520px}
+  .quick-links{max-width:none;padding:0 12%}.quick-links a{padding:24px 10px}
+  .welcome{padding:93px 30px 82px}
+  .welcome::before{width:275px;height:330px;right:-30px;top:-35px;opacity:.72}
+  .day-summary{grid-template-columns:repeat(4,minmax(0,1fr));padding:28px max(5vw,24px)}
+  .day-summary a{border-bottom:0!important;border-right:1px solid rgba(226,191,135,.4)!important;padding:14px 21px}
+  .day-summary a:last-child{border-right:0!important}
+  .day-summary strong{font-size:12px}
+  .day-summary span:last-child{font-size:12px}
+}
+@media(max-width:359px){
+  .topbar .brand-mark{font-size:20px}
+  .nav-rsvp{padding:7px 10px}
+  .hero .wedding-hero-title{font-size:35px!important}
+  .hero-florals::before{width:180px;height:220px}
+  .hero-florals::after{width:180px;height:200px}
+  .hero{padding-left:24px!important;padding-right:24px!important}
+}
+@media(prefers-reduced-motion:reduce){.quick-links a,.day-summary a{transition:none}}
