@@ -1,7 +1,7 @@
 /* Manuk & Nayomi · entirely isolated wedding microsite styles */
 :root{
   --ivory:#faf7f1;--cream:#f5eee5;--paper:#fffdf9;--navy:#1a2940;--deep:#122033;
-  --ink:#28313c;--muted:#697079;--gold:#af9468;--gold-light:#d5bf95;--apricot:#e9b18b;
+  --ink:#28313c;--muted:#697079;--gold:#8b6a49;--gold-light:#d5bf95;--apricot:#e9b18b;
   --peach:#f2d2bd;--sage:#83917a;--border:rgba(26,41,64,.13);
   --serif:"Iowan Old Style","Baskerville","Palatino Linotype","Book Antiqua",Georgia,serif;
   --sans:"Avenir Next","Segoe UI",Arial,sans-serif;
@@ -104,7 +104,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .field input[type="text"],.field textarea,.field select{display:block;width:100%;border:1px solid #ded6ca;border-radius:0;background:#fff;padding:13px 14px;color:var(--navy);min-height:49px;resize:vertical;font-size:16px}
 .field input::placeholder,.field textarea::placeholder{color:#949194}
 .field input:focus,.field textarea:focus,.field select:focus{outline:2px solid #bc8b63;outline-offset:1px}
-.hint{display:block;color:#88817d;font-size:12px;margin-top:6px;line-height:1.5}
+.hint{display:block;color:#6d6b6a;font-size:12px;margin-top:6px;line-height:1.5}
 .choice-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .choice{cursor:pointer;display:flex;align-items:center;gap:9px;border:1px solid #ded6ca;min-height:56px;padding:10px 13px;font-size:13px;font-weight:600;color:var(--navy);background:white}
 .choice:has(input:checked){background:#f7eee3;border-color:#b99470}
@@ -188,3 +188,5 @@ details[open] summary span{transform:rotate(45deg)}
   .site-footer{flex-direction:row;align-items:center;justify-content:space-between;padding:23px 5vw}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+
+.rsvp-success{padding:46px 24px;text-align:center;font:400 26px/1.4 var(--serif);color:var(--navy);background:#f4efe5;border:1px solid #cfb997}
