@@ -63,6 +63,11 @@
 
   if (!gate || !pinForm || !rsvpForm || !choicesBox) return;
 
+  // Keep HTML input rules in sync even when a browser restores an older form.
+  pinInput.maxLength = 7;
+  pinInput.minLength = 7;
+  pinInput.pattern = "[0-9]{7}";
+
   let activeInvitation = null;
 
   const setSiteInert = (isLocked) => {
