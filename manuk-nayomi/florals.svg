@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1100" role="img" aria-labelledby="title desc">
+<title id="title">Ivory wedding flowers with apricot and peach accents</title>
+<desc id="desc">Romantic floral illustration of white blossoms, soft peach flowers, champagne stems and restrained greenery on a warm ivory background.</desc>
+<defs>
+  <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f5e6d8"/><stop offset=".55" stop-color="#fff8ee"/><stop offset="1" stop-color="#f2e2d3"/></linearGradient>
+  <radialGradient id="whitePetal" cx=".32" cy=".22" r=".9"><stop stop-color="#fffefa"/><stop offset=".54" stop-color="#fffaf3"/><stop offset=".87" stop-color="#eddfd5"/><stop offset="1" stop-color="#dbc7b7"/></radialGradient>
+  <radialGradient id="peachPetal" cx=".35" cy=".25" r=".95"><stop stop-color="#fff4e7"/><stop offset=".5" stop-color="#f5c9aa"/><stop offset=".88" stop-color="#dfa780"/><stop offset="1" stop-color="#c58f72"/></radialGradient>
+  <radialGradient id="apricotPetal" cx=".35" cy=".25" r=".85"><stop stop-color="#fbe0bd"/><stop offset=".48" stop-color="#ebae82"/><stop offset=".88" stop-color="#ce8b64"/><stop offset="1" stop-color="#ac745a"/></radialGradient>
+  <radialGradient id="centre"><stop stop-color="#f7e9bf"/><stop offset=".72" stop-color="#caae76"/><stop offset="1" stop-color="#b88b56"/></radialGradient>
+  <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a2ae91"/><stop offset=".55" stop-color="#87977b"/><stop offset="1" stop-color="#657768"/></linearGradient>
+  <linearGradient id="darkLeaf" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#8e9b7d"/><stop offset="1" stop-color="#627965"/></linearGradient>
+  <filter id="blur"><feGaussianBlur stdDeviation="22"/></filter>
+  <filter id="soft"><feGaussianBlur stdDeviation="1.2"/></filter>
+  <g id="flower-white">
+    <ellipse cx="0" cy="-45" rx="28" ry="56" fill="url(#whitePetal)" stroke="#dfcabe" stroke-width=".7"/>
+    <ellipse cx="0" cy="-45" rx="28" ry="56" fill="url(#whitePetal)" stroke="#dfcabe" stroke-width=".7" transform="rotate(45)"/>
+    <ellipse cx="0" cy="-45" rx="28" ry="56" fill="url(#whitePetal)" stroke="#dfcabe" stroke-width=".7" transform="rotate(90)"/>
+    <ellipse cx="0" cy="-45" rx="28" ry="56" fill="url(#whitePetal)" stroke="#dfcabe" stroke-width=".7" transform="rotate(135)"/>
+    <ellipse cx="0" cy="-45" rx="28" ry="56" fill="url(#whitePetal)" stroke="#dfcabe" stroke-width=".7" transform="rotate(180)"/>
+    <ellipse cx="0" cy="-45" rx="28" ry="56" fill="url(#whitePetal)" stroke="#dfcabe" stroke-width=".7" transform="rotate(225)"/>
+    <ellipse cx="0" cy="-45" rx="28" ry="56" fill="url(#whitePetal)" stroke="#dfcabe" stroke-width=".7" transform="rotate(270)"/>
+    <ellipse cx="0" cy="-45" rx="28" ry="56" fill="url(#whitePetal)" stroke="#dfcabe" stroke-width=".7" transform="rotate(315)"/>
+    <circle r="24" fill="url(#centre)" opacity=".9"/><circle r="13" fill="#e3c695"/>
+    <g stroke="#b48b54" stroke-width="1.5" stroke-linecap="round"><path d="M-7 0l-5 -9M7 0l8 -8M0 9l1 10M-3 -5l-2 -13M11 6l13 4"/></g>
+    <g fill="#fff7d1"><circle cx="-12" cy="-9" r="3"/><circle cx="15" cy="-8" r="3"/><circle cx="1" cy="18" r="3"/><circle cx="-5" cy="-17" r="3"/><circle cx="24" cy="10" r="3"/></g>
+  </g>
+  <g id="flower-peach">
+    <ellipse cx="0" cy="-39" rx="24" ry="50" fill="url(#peachPetal)" transform="rotate(0)"/>
+    <ellipse cx="0" cy="-39" rx="24" ry="50" fill="url(#peachPetal)" transform="rotate(51)"/>
+    <ellipse cx="0" cy="-39" rx="24" ry="50" fill="url(#peachPetal)" transform="rotate(102)"/>
+    <ellipse cx="0" cy="-39" rx="24" ry="50" fill="url(#peachPetal)" transform="rotate(153)"/>
+    <ellipse cx="0" cy="-39" rx="24" ry="50" fill="url(#peachPetal)" transform="rotate(204)"/>
+    <ellipse cx="0" cy="-39" rx="24" ry="50" fill="url(#peachPetal)" transform="rotate(255)"/>
+    <ellipse cx="0" cy="-39" rx="24" ry="50" fill="url(#peachPetal)" transform="rotate(306)"/>
+    <circle r="21" fill="url(#centre)"/><circle r="10" fill="#f4dbad"/>
+  </g>
+  <g id="flower-apricot">
+    <ellipse cx="0" cy="-33" rx="23" ry="45" fill="url(#apricotPetal)" transform="rotate(0)"/>
+    <ellipse cx="0" cy="-33" rx="23" ry="45" fill="url(#apricotPetal)" transform="rotate(60)"/>
+    <ellipse cx="0" cy="-33" rx="23" ry="45" fill="url(#apricotPetal)" transform="rotate(120)"/>
+    <ellipse cx="0" cy="-33" rx="23" ry="45" fill="url(#apricotPetal)" transform="rotate(180)"/>
+    <ellipse cx="0" cy="-33" rx="23" ry="45" fill="url(#apricotPetal)" transform="rotate(240)"/>
+    <ellipse cx="0" cy="-33" rx="23" ry="45" fill="url(#apricotPetal)" transform="rotate(300)"/>
+    <circle r="16" fill="#f4d9a4"/><circle r="8" fill="#c7a46f"/>
+  </g>
+  <g id="leaf-pair">
+    <path d="M0 0Q-42 -64 -7 -95Q34 -66 0 0Z" fill="url(#leaf)" opacity=".9"/>
+    <path d="M0 0Q33 -54 77 -45Q71 -5 0 0Z" fill="url(#darkLeaf)" opacity=".88"/>
+    <path d="M0 0L-8 -77M0 0L57 -35" stroke="#e0dfcb" stroke-width="1.4" opacity=".64"/>
+  </g>
+  <g id="sprig">
+    <path d="M0 0Q35 -60 48 -144" fill="none" stroke="#84937a" stroke-width="3"/>
+    <path d="M22 -48Q-14 -80 8 -111Q41 -98 22 -48ZM35 -78Q68 -129 100 -113Q75 -81 35 -78ZM42 -114Q0 -164 26 -182Q58 -158 42 -114Z" fill="url(#leaf)" opacity=".86"/>
+  </g>
+</defs>
+<rect width="900" height="1100" fill="url(#paper)"/>
+<circle cx="722" cy="112" r="160" fill="#f4d1ae" opacity=".19" filter="url(#blur)"/>
+<ellipse cx="168" cy="975" rx="225" ry="158" fill="#d5c8aa" opacity=".15" filter="url(#blur)"/>
+<ellipse cx="445" cy="550" rx="290" ry="450" fill="#fffdf5" opacity=".22" filter="url(#blur)"/>
+<g opacity=".30" fill="none" stroke="#c9ad90" stroke-width="1">
+  <rect x="23" y="23" width="854" height="1054"/>
+  <rect x="31" y="31" width="838" height="1038"/>
+  <path d="M450 54V90M450 1010v36M50 550h30M820 550h30"/>
+</g>
+<!-- Upper right bouquet: elegant ivory flowers first, with small peach accents -->
+<g fill="none" stroke="#71816c" stroke-linecap="round" opacity=".70">
+ <path d="M945 20Q760 120 640 370M850 -22Q680 95 570 265M987 100Q805 182 740 390M870 0Q722 235 705 415" stroke-width="6"/>
+ <path d="M765 120Q680 155 622 160M810 190Q760 280 720 285M693 260Q624 326 580 338" stroke-width="3"/>
+</g>
+<use href="#leaf-pair" transform="translate(795 145) rotate(-38) scale(1.08)"/>
+<use href="#leaf-pair" transform="translate(681 189) rotate(56) scale(.8)"/>
+<use href="#leaf-pair" transform="translate(838 269) rotate(75) scale(.85)"/>
+<use href="#leaf-pair" transform="translate(713 352) rotate(-26) scale(.75)"/>
+<use href="#sprig" transform="translate(689 315) rotate(-35) scale(.95)"/>
+<use href="#sprig" transform="translate(896 281) rotate(51) scale(.83)"/>
+<use href="#flower-white" transform="translate(825 75) rotate(8) scale(1.30)"/>
+<use href="#flower-white" transform="translate(650 118) rotate(-12) scale(1.05)"/>
+<use href="#flower-white" transform="translate(785 250) rotate(20) scale(1.12)"/>
+<use href="#flower-peach" transform="translate(900 230) rotate(8) scale(.85)"/>
+<use href="#flower-apricot" transform="translate(610 275) rotate(11) scale(.62)"/>
+<use href="#flower-white" transform="translate(896 390) rotate(38) scale(.72)"/>
+<!-- upper left sprays -->
+<g fill="none" stroke="#81917b" stroke-width="4" opacity=".65"><path d="M-40 83Q94 168 172 305M36 0Q144 135 211 211"/></g>
+<use href="#sprig" transform="translate(130 265) rotate(170) scale(.9)"/>
+<use href="#leaf-pair" transform="translate(82 115) rotate(120) scale(.75)"/>
+<use href="#flower-white" transform="translate(30 40) rotate(-21) scale(.85)"/>
+<use href="#flower-peach" transform="translate(172 181) rotate(18) scale(.65)"/>
+<use href="#flower-white" transform="translate(16 287) rotate(-5) scale(.57)"/>
+<!-- lower left bouquet -->
+<g fill="none" stroke="#71816c" stroke-linecap="round" opacity=".74">
+ <path d="M-35 1118Q130 835 350 724M60 1090Q189 875 295 770M-45 902Q129 843 288 790" stroke-width="6"/>
+ <path d="M88 934Q118 850 103 790M225 830Q230 774 316 710" stroke-width="3"/>
+</g>
+<use href="#sprig" transform="translate(150 837) rotate(-139) scale(1.1)"/>
+<use href="#sprig" transform="translate(306 845) rotate(-96) scale(.8)"/>
+<use href="#leaf-pair" transform="translate(214 920) rotate(19) scale(.83)"/>
+<use href="#leaf-pair" transform="translate(62 808) rotate(-55) scale(.96)"/>
+<use href="#leaf-pair" transform="translate(284 1006) rotate(-80) scale(.65)"/>
+<use href="#flower-white" transform="translate(66 1031) rotate(15) scale(1.38)"/>
+<use href="#flower-white" transform="translate(185 893) rotate(-17) scale(1.16)"/>
+<use href="#flower-white" transform="translate(5 789) rotate(30) scale(.97)"/>
+<use href="#flower-white" transform="translate(305 1014) rotate(-24) scale(.78)"/>
+<use href="#flower-peach" transform="translate(303 777) rotate(3) scale(.89)"/>
+<use href="#flower-apricot" transform="translate(153 1099) rotate(20) scale(.70)"/>
+<!-- lower right airy floral details -->
+<g fill="none" stroke="#87957e" stroke-width="4" opacity=".65">
+ <path d="M925 955Q794 850 703 754M930 1090Q756 955 654 863"/>
+</g>
+<use href="#leaf-pair" transform="translate(775 881) rotate(140) scale(.75)"/>
+<use href="#sprig" transform="translate(845 930) rotate(154) scale(.72)"/>
+<use href="#flower-white" transform="translate(876 1074) rotate(14) scale(.94)"/>
+<use href="#flower-white" transform="translate(711 979) rotate(7) scale(.61)"/>
+<use href="#flower-peach" transform="translate(805 790) rotate(30) scale(.57)"/>
+<!-- tiny champagne pollen details -->
+<g fill="#b99c72" opacity=".45">
+  <circle cx="329" cy="210" r="3"/><circle cx="357" cy="254" r="2"/><circle cx="532" cy="136" r="2.8"/>
+  <circle cx="530" cy="940" r="2.5"/><circle cx="582" cy="994" r="2"/><circle cx="411" cy="796" r="3.5"/>
+  <circle cx="127" cy="415" r="2.5"/><circle cx="766" cy="532" r="2"/><circle cx="804" cy="602" r="2.6"/>
+  <circle cx="453" cy="153" r="2"/><circle cx="490" cy="971" r="2"/>
+</g>
+</svg>
