@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive,noimageindex">
+  <meta name="referrer" content="no-referrer">
+  <title>Wedding RSVP Dashboard Preview | Manuk &amp; Nayomi</title>
+  <link rel="icon" href="florals.svg" type="image/svg+xml">
+  <style>
+    :root{font-family:"Segoe UI",Arial,sans-serif;color:#182940;background:#f9f5ef}
+    *,*:before,*:after{box-sizing:border-box}
+    body{margin:0;font-size:15px;line-height:1.6}
+    .top{background:#11253f;color:#fff8eb;padding:18px 6%;display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    .brand{font:italic 28px Georgia,serif}.brand em{color:#e4b679}
+    a{color:inherit}.top a{font-size:12px}
+    main{max-width:1120px;padding:36px 18px 70px;margin:auto}
+    .eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.18em;color:#987044;font-weight:700}
+    h1{font:400 clamp(35px,6vw,58px) Georgia,serif;color:#182940;margin:10px 0}
+    h2{font:400 28px Georgia,serif;margin:0 0 15px}
+    .intro{color:#5d6671;max-width:780px;margin:0 0 23px}
+    .warning{background:#fbebd9;border:1px solid #dbb68a;padding:15px 18px;color:#674d38;margin:20px 0 25px}
+    .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:35px}
+    .metric{background:#fffefa;border:1px solid #e6d9c8;padding:22px}
+    .metric strong{font:400 38px Georgia,serif;display:block;color:#15283f}
+    .metric span{font-size:12px;color:#66717b}
+    .panel{background:#fffefa;border:1px solid #e3d8c6;padding:20px;margin:22px 0}
+    .table-wrap{overflow-x:auto}
+    table{border-collapse:collapse;width:100%;min-width:670px;font-size:13px}
+    th,td{text-align:left;padding:13px 11px;border-bottom:1px solid #e9e1d5;vertical-align:top}
+    th{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:#6c7280;background:#f8f2e9}
+    .status{display:inline-block;border-radius:20px;padding:4px 10px;font-size:11px;font-weight:700;background:#f4eadc;color:#795733}
+    .status.yes{background:#e5f0e6;color:#2e693b}
+    .status.no{background:#f5e9e7;color:#935349}
+    button{background:#11253f;color:#fff8ea;border:1px solid #11253f;padding:13px 17px;cursor:pointer;font:700 12px "Segoe UI",Arial,sans-serif;text-transform:uppercase;letter-spacing:.07em}
+    button:focus-visible,a:focus-visible{outline:3px solid #b9874a;outline-offset:3px}
+    .header-row{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
+    .notes{color:#626a72;font-size:13px}
+    @media(min-width:750px){.cards{grid-template-columns:repeat(4,1fr)}main{padding-top:56px}}
+  </style>
+</head>
+<body>
+  <header class="top"><div class="brand">Manuk <em>&amp;</em> Nayomi</div><a href="./">Back to wedding preview</a></header>
+  <main>
+    <p class="eyebrow">Wedding · Sunday 7 March 2027</p>
+    <h1>RSVP dashboard <em style="color:#b58857">preview</em></h1>
+    <p class="intro">An example of what you and Nayomi will be able to manage once secure guest invitations and real RSVP storage are connected.</p>
+    <div class="warning" role="note"><strong>Fictional sample data only.</strong> This preview is not password protected and does not contain or receive real guest information. Please do not add a real guest list to GitHub.</div>
+    <div class="cards">
+      <article class="metric"><strong>3</strong><span>Sample invitations</span></article>
+      <article class="metric"><strong>1</strong><span>Accepted invitations</span></article>
+      <article class="metric"><strong>1</strong><span>Awaiting replies</span></article>
+      <article class="metric"><strong>4</strong><span>Sample guests attending · 2 adults, 2 children</span></article>
+    </div>
+    <section class="panel" aria-labelledby="guest-heading">
+      <div class="header-row"><h2 id="guest-heading">Example guest list</h2><button type="button" id="export-sample">Download sample CSV</button></div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Invitation</th><th>People invited</th><th>RSVP</th><th>Adults attending</th><th>Children attending</th><th>Child ages</th></tr></thead>
+          <tbody>
+            <tr><td>DEMO-001</td><td>Fiona Ellis</td><td><span class="status no">Declined</span></td><td>0</td><td>0</td><td>—</td></tr>
+            <tr><td>DEMO-002</td><td>Alex &amp; Jamie Morgan</td><td><span class="status">Awaiting reply</span></td><td>—</td><td>—</td><td>—</td></tr>
+            <tr><td>DEMO-003</td><td>Jordan &amp; Casey Lee, Avery &amp; Quinn</td><td><span class="status yes">Accepted</span></td><td>2</td><td>2</td><td>8, 5</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="notes">The CSV includes guest names, attendance, children's ages and columns for allergies, dietary and accessibility requirements, ready for a future venue report. No real responses are stored in this preview.</p>
+    </section>
+    <section class="panel">
+      <h2>What the live dashboard will do</h2>
+      <p class="notes">View invitation households, PIN status, responses, adult and child totals, dietary and allergy details, outstanding replies and downloadable venue-ready CSV files. A private sign-in and secure database are required before any real guests are added.</p>
+    </section>
+  </main>
+  <script>
+  (() => {
+    "use strict";
+    const rows = [
+      {invitation_id:"DEMO-001",invitation_name:"Fiona Ellis",status:"Declined",adults_attending:"0",adult_guest_names:"",children_attending:"0",child_names:"",child_ages:"",dietary_requirements:"",allergies:"",accessibility_requirements:"",song_request:"",message:""},
+      {invitation_id:"DEMO-002",invitation_name:"Alex & Jamie Morgan",status:"Awaiting reply",adults_attending:"",adult_guest_names:"",children_attending:"",child_names:"",child_ages:"",dietary_requirements:"",allergies:"",accessibility_requirements:"",song_request:"",message:""},
+      {invitation_id:"DEMO-003",invitation_name:"Jordan & Casey Lee, Avery & Quinn",status:"Accepted",adults_attending:"2",adult_guest_names:"Jordan Lee; Casey Lee",children_attending:"2",child_names:"Avery Lee; Quinn Lee",child_ages:"8; 5",dietary_requirements:"None",allergies:"None",accessibility_requirements:"None",song_request:"",message:""}
+    ];
+    function csvCell(value) {
+      // Avoid spreadsheet formula execution in exported data.
+      const text = String(value == null ? "" : value);
+      const safe = /^[\s]*[=+\-@]/.test(text) ? "'" + text : text;
+      return '"' + safe.replace(/"/g, '""') + '"';
+    }
+    document.getElementById("export-sample")?.addEventListener("click", () => {
+      const columns = Object.keys(rows[0]);
+      const csv = [columns.map(csvCell).join(","), ...rows.map(row => columns.map(key => csvCell(row[key])).join(","))].join("\r\n");
+      const file = new Blob(["\uFEFF",csv],{type:"text/csv;charset=utf-8"});
+      const url = URL.createObjectURL(file);
+      const a = document.createElement("a");a.href=url;a.download="wedding-rsvp-SAMPLE-ONLY.csv";
+      document.body.append(a);a.click();a.remove();
+      setTimeout(() => URL.revokeObjectURL(url),1000);
+    });
+  })();
+  </script>
+</body>
+</html>
