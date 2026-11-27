@@ -416,3 +416,105 @@ body{background:var(--ivory)}
   .hero-florals::before,.hero-florals::after{width:155px!important;height:155px!important}
   .hero .wedding-hero-title{font-size:27px!important}
 }
+
+
+/* ------------------------------------------------------------------------
+   PERSONALISED INVITATION PREVIEW
+   The codes live in a fictional browser-side demo, NOT a security boundary.
+   This is deliberately scoped to the wedding website only.
+   ------------------------------------------------------------------------ */
+body.invitation-preview-locked{overflow:hidden}
+.invite-gate[hidden],#pin-entry[hidden],#pin-welcome[hidden],.personal-invitation[hidden],
+.invitation-rsvp-note[hidden],.invite-attendees[hidden],.rsvp-preview-result[hidden]{display:none!important}
+.invite-gate{
+  position:fixed;z-index:1000;inset:0;overflow-y:auto;overscroll-behavior:contain;
+  display:flex;justify-content:center;align-items:center;
+  padding:28px 18px;min-height:100dvh;
+  background:radial-gradient(ellipse at 50% 45%,#1d3651,#12273f 52%,#0b1b30);
+  color:#fffbf4;isolation:isolate;text-align:center
+}
+.invite-gate::before,.invite-gate::after{
+  content:"";position:fixed;z-index:1;pointer-events:none;
+  inset:12px;border:1px solid #c9a16c
+}
+.invite-gate::after{inset:17px;border-color:rgba(231,193,132,.45)}
+.gate-flowers{position:absolute;z-index:2;pointer-events:none;
+  width:170px;height:170px;background:url("floral-clean-transparent.svg?v=3") center/contain no-repeat}
+.gate-flowers-top{top:0;left:0}
+.gate-flowers-bottom{right:0;bottom:0;transform:rotate(180deg)}
+.gate-panel{position:relative;z-index:3;max-width:580px;width:100%;padding:46px 10px;margin:auto}
+.gate-brand{font:italic 400 clamp(25px,6.4vw,42px)/1.3 var(--serif);letter-spacing:-.04em;color:#fff8ec}
+.gate-brand em{color:#e6b679;font-weight:400}
+.gate-rule{font-size:14px;color:#f0c286;margin:21px 0 22px}
+.gate-kicker{font:700 10px/1.6 var(--sans);letter-spacing:.28em;text-transform:uppercase;color:#e9bf88;margin:0 0 16px}
+.gate-panel h2{font:italic 400 clamp(38px,8vw,65px)/1.12 var(--serif);
+  letter-spacing:-.045em;color:#fffdf6;margin:0 0 17px}
+.gate-panel h2 em{color:#f1c68a;font-weight:400}
+.gate-description{font:italic 17px/1.6 var(--serif);color:#efe7dd;margin:0 auto 25px;max-width:400px}
+.gate-panel label[for="invite-pin"]{display:block;margin-bottom:10px;font-size:12px;
+  color:#e8c99d;text-transform:uppercase;letter-spacing:.15em;font-weight:700}
+#invite-pin{display:block;width:min(100%,255px);height:57px;margin:0 auto 17px;text-align:center;
+  color:#192840;background:#fffbf4;border:2px solid #ddbf92;border-radius:3px;
+  font:700 23px var(--sans);letter-spacing:.35em;padding:0 10px}
+#invite-pin:focus-visible{outline:3px solid #ffdeb0;outline-offset:3px}
+#invite-pin::placeholder{letter-spacing:.09em;font-size:16px;color:#aaa29a}
+.gate-button{width:min(100%,275px);font-size:11px!important;font-weight:800;letter-spacing:.12em}
+.gate-error{min-height:1.5em;font-size:13px;color:#ffe0bf;margin:10px auto 0;max-width:370px}
+.gate-demo{border-top:1px solid rgba(229,194,137,.42);margin:24px auto 0;padding-top:21px;max-width:470px}
+.gate-demo strong{font-size:12px;color:#fff4e9}
+.gate-demo p{font-size:12px;color:#ddd3c9;margin:6px 0 15px}
+.demo-pin-options{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.demo-pin-options button{background:rgba(244,216,181,.09);border:1px solid rgba(225,189,138,.54);
+  border-radius:4px;padding:10px 12px;color:#fff9f1;font-size:11px;font-weight:600}
+.demo-pin-options button:hover,.demo-pin-options button:focus-visible{background:#eed1a9;color:#182740}
+.gate-people{color:#fff1df;font-size:14px;line-height:1.6;max-width:420px;margin:0 auto 17px}
+.gate-date{font:600 12px var(--sans);letter-spacing:.07em;color:#ecc495;margin:12px 0 29px}
+.gate-footnote{font-size:10px;letter-spacing:.06em;color:#d7c4b2;margin:30px auto 0;max-width:420px}
+.personal-invitation{display:flex;flex-direction:column;align-items:center;text-align:center;gap:20px;
+  background:#f8ede0;border-top:1px solid #d7b187;border-bottom:1px solid #d7b187;padding:37px 22px}
+.personal-invitation .kicker{margin:0 0 9px;color:#977044}
+.personal-invitation h2{font:italic 400 clamp(30px,5.8vw,42px)/1.24 var(--serif);letter-spacing:-.035em;
+  color:#192941;margin:0}
+.personal-invitation p:not(.kicker){font-size:14px;color:#56606b;margin:8px auto 0;max-width:560px}
+.personal-invitation .button{min-width:200px}
+.invitation-switch{background:none;border:0;text-decoration:underline;text-underline-offset:4px;
+  color:#69533e;padding:9px;font-size:12px}
+.invitation-rsvp-note{padding:15px 17px;background:#f8f0e5;border-left:3px solid #bb905d;
+  margin:0 0 25px;color:#4d5761;font-size:13px;line-height:1.6}
+.invite-attendees{padding:13px 0 25px}
+.invite-attendees .field-label{margin:0 0 6px;color:var(--navy);font-weight:800;font-size:14px}
+.invite-attendees .hint{margin:0 0 12px}
+#invited-people-choices{display:grid;gap:9px}
+.invited-choice{display:flex;align-items:center;gap:14px;cursor:pointer;background:white;
+  border:1px solid #e1d5c7;padding:13px 15px;color:var(--navy);min-height:64px;text-align:left}
+.invited-choice:has(input:checked){border-color:#c19762;background:#fbf4e9}
+.invited-choice input{accent-color:#18304c;width:20px;height:20px;flex:none}
+.invited-choice span{display:flex;flex-direction:column;gap:2px}
+.invited-choice strong{font-size:14px;line-height:1.4}
+.invited-choice small{font-size:12px;color:#707981}
+.preview-rsvp{display:inline-flex!important;width:100%;margin:0 0 12px!important;text-align:center}
+.preview-rsvp:disabled{opacity:.55;cursor:not-allowed}
+.rsvp-preview-result{margin:18px 0 0;background:#f8f0e5;border:1px solid #ddc7a8;
+  padding:19px;text-align:left;color:#18283c;font-size:13px}
+.rsvp-preview-result>strong{font:400 22px var(--serif)}
+.rsvp-preview-result p{margin:8px 0;line-height:1.55;overflow-wrap:anywhere}
+.rsvp-preview-result p:last-child{font-weight:700;color:#9a7048}
+@media(min-width:640px){
+  .invite-gate::before{inset:28px}.invite-gate::after{inset:35px}
+  .gate-flowers{width:275px;height:275px}
+  .gate-panel{padding:60px 12px}
+  .personal-invitation{padding:45px 30px}
+}
+@media(min-width:920px){
+  .gate-flowers{width:350px;height:350px}
+  .gate-panel{padding:70px 10px}
+  .personal-invitation{flex-direction:row;justify-content:center;text-align:left;gap:35px}
+  .personal-invitation h2{max-width:450px}
+  .personal-invitation p:not(.kicker){margin:8px 0}
+}
+@media(max-height:670px){
+  .invite-gate{align-items:flex-start}
+  .gate-panel{padding:42px 6px}
+  .gate-flowers{opacity:.6}
+}
+@media(prefers-reduced-motion:reduce){.invite-gate,.personal-invitation{transition:none}}
