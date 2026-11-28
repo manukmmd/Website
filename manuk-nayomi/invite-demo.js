@@ -76,10 +76,10 @@
     for (const animation of monogram.getAnimations()) animation.cancel();
     monogram.animate([
       { opacity: 0 },
-      { opacity: 1, offset: 0.18 },
-      { opacity: 1, offset: 0.55 },
+      { opacity: 1, offset: 0.15 },
+      { opacity: 1, offset: 0.72 },
       { opacity: 0 }
-    ], { duration: 740, easing: "ease-in-out" });
+    ], { duration: 1900, easing: "ease-in-out" });
   }
 
   document.addEventListener("click", event => {
