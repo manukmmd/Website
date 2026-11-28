@@ -401,7 +401,7 @@ body{background:var(--ivory)}
   line-height:1.15!important;
   white-space:nowrap!important;
   letter-spacing:-.045em!important;
-  padding-inline:.08em;
+  padding:.05em .1em .16em;
 }
 .hero-inner{max-width:980px!important}
 @media(min-width:600px){
@@ -640,4 +640,13 @@ body.invitation-preview-locked{overflow:hidden}
 .schedule-intro .invitation-ornament, .faq-layout .invitation-ornament { margin-left: 0; }
 @media (max-width: 600px) {
   .invitation-ornament { width: min(260px, 78%); }
+}
+
+@media (min-width: 1200px) {
+  .hero {
+    max-width: 1320px;
+    margin: 24px auto;
+    width: calc(100% - 96px);
+  }
+  .hero .hero-intro { font-size: 21px; line-height: 1.48; }
 }
