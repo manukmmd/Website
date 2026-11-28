@@ -518,3 +518,22 @@ body.invitation-preview-locked{overflow:hidden}
   .gate-flowers{opacity:.6}
 }
 @media(prefers-reduced-motion:reduce){.invite-gate,.personal-invitation{transition:none}}
+
+/* Wedding day photographs */
+.day-card {
+  background-color: #172434;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.day-card-soon {
+  background-image: linear-gradient(180deg, rgba(11,20,32,.72), rgba(11,20,32,.22) 28%, rgba(11,20,32,.86) 61%), url("poruwa.webp");
+  justify-content: flex-end;
+}
+.day-card-feature {
+  background-image: linear-gradient(110deg, rgba(10,20,34,.89), rgba(10,20,34,.73) 58%, rgba(10,20,34,.38)), url("darling-island.webp");
+}
+.day-card h3, .day-card p, .day-card .address, .day-card .address span { color: #fffaf4; }
+.day-card .card-eyebrow, .day-card h3 em { color: #ffe3b4; }
+.day-card .card-number, .day-card .coming-label { border-color: #d3baa0; }
+.day-card .button-outline { background: #fff9ef; color: #162335; border-color: #fff9ef; }
