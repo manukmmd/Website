@@ -197,8 +197,8 @@ details[open] summary span{transform:rotate(45deg)}
 :root{
   --navy:#10223a;
   --deep:#0d1c30;
-  --gold:#765700;
-  --gold-light:#f5c638;
+  --gold:#71562c;
+  --gold-light:#d6b675;
   --cream:#fbf3eb;
   --ivory:#fff9f2;
 }
@@ -250,13 +250,13 @@ body{background:var(--ivory)}
   letter-spacing:-.048em;margin:0 auto!important;white-space:normal;display:block;
   text-shadow:0 1px 8px rgba(0,0,0,.13)
 }
-.hero .wedding-hero-title em{font-style:italic;color:#f5c638;letter-spacing:0;font-size:.92em}
+.hero .wedding-hero-title em{font-style:italic;color:#d6b675;letter-spacing:0;font-size:.92em}
 .hero-gold-divider{display:block;color:#e7ba75;font-size:15px;line-height:1;margin:22px auto 13px}
 .hero-date-full{color:#f8f3ee;letter-spacing:.22em;font-size:11px;font-weight:700;text-transform:uppercase;margin:0}
 .hero .hero-place{color:#f7ece4;font-size:10px;letter-spacing:.25em;margin:11px 0 23px;text-transform:uppercase}
 .hero .hero-intro{color:#f9f4ed;font:italic 17px/1.6 var(--serif);max-width:360px;margin:0 auto 26px}
 .hero .hero-button{
-  background:linear-gradient(105deg,#ffe28b,#edbc2e 55%,#ffd960)!important;color:#15243c!important;
+  background:linear-gradient(105deg,#f2dfb2,#bc995a 55%,#e4cb95)!important;color:#15243c!important;
   font-size:12px;letter-spacing:.24em;min-width:139px;min-height:47px;margin:0;
   border:1px solid #ffe3ad;box-shadow:0 4px 16px rgba(0,0,0,.1)
 }
@@ -540,9 +540,9 @@ body.invitation-preview-locked{overflow:hidden}
 
 /* Yellow gold on navy, deep gold on ivory. */
 :root {
-  --yellow-gold: #f5c638;
-  --antique-gold: #765700;
-  --gold-edge: #ce9b18;
+  --foil-gold: #d6b675;
+  --antique-gold: #71562c;
+  --gold-edge: #ad8c50;
 }
 .topbar, .quick-links, .personal-invitation, .day-summary, .travel-card,
 .rsvp-panel, .faq-list details, .travel-notes details, .photo-slot {
@@ -561,17 +561,17 @@ body.invitation-preview-locked{overflow:hidden}
 .hero .hero-button, .gate-button, .closing .button {
   color: #192538;
   border-color: var(--gold-edge);
-  background: linear-gradient(115deg, #ffe28b, #edbc2e 55%, #ffd960);
+  background: linear-gradient(115deg, #f2dfb2, #bc995a 55%, #e4cb95);
 }
 .gate-brand, .gate-brand em, .gate-rule, .gate-date, .gate-panel label[for="invite-pin"],
 .hero-gold-divider, .day-card .card-eyebrow, .day-card h3 em, .gate-panel h2 em, .gate-kicker, .hero-overline,
 .hero .hero-date-full, .hero .hero-place, .day-card h3, .day-card .card-time,
 .schedule-section h2 em, .timeline h3, .timeline time, .closing h2 em,
 .closing-script, .site-footer span:first-child {
-  color: var(--yellow-gold);
+  color: var(--foil-gold);
 }
 .timeline::before { background: var(--gold-edge); }
-.timeline-dot { background: var(--yellow-gold); border-color: var(--gold-edge); }
+.timeline-dot { background: var(--foil-gold); border-color: var(--gold-edge); }
 .rsvp-notice, .invitation-rsvp-note, .rsvp-preview-result, .invited-choice:has(input:checked) {
   background: #fbf2df;
   border-color: var(--gold-edge);
@@ -581,4 +581,31 @@ body.invitation-preview-locked{overflow:hidden}
 
 .invite-gate::before, .invite-gate::after, #invite-pin, .demo-pin-options button,
 .hero::before, .hero::after, .gate-demo { border-color: var(--gold-edge); }
-.demo-pin-options button:hover, .demo-pin-options button:focus-visible { background: var(--yellow-gold); color: var(--deep); }
+.demo-pin-options button:hover, .demo-pin-options button:focus-visible { background: var(--foil-gold); color: var(--deep); }
+
+.invitation-date {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) auto minmax(0,1fr);
+  gap: 3px 12px;
+  align-items: center;
+  width: min(100%, 350px);
+  margin: 16px auto;
+  color: #e8d3a7;
+  text-align: center;
+}
+.date-readable { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.date-weekday { grid-column: 1 / -1; font: 600 12px/1.3 var(--sans); letter-spacing: .18em; text-transform: uppercase; }
+.date-wing { border-block: 1px solid var(--gold-edge); padding: 5px 0; font: 600 15px/1.15 var(--serif); letter-spacing: .14em; text-transform: uppercase; }
+.date-day { font: 400 clamp(50px, 9vw, 76px)/1 var(--serif); }
+@supports (background-clip: text) {
+  @media (forced-colors: none) {
+    .hero .wedding-hero-title, .gate-brand, .gate-panel h2 em, .date-day {
+      width: fit-content;
+      margin-inline: auto;
+      background-image: linear-gradient(110deg, #b69556 2%, #efddb3 24%, #bd9b60 46%, #e7ce98 70%, #ba995f 94%);
+      background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
