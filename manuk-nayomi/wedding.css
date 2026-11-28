@@ -609,3 +609,24 @@ body.invitation-preview-locked{overflow:hidden}
     }
   }
 }
+
+#wedding-transition {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: grid;
+  place-items: center;
+  background: #11253c;
+  opacity: 0;
+  pointer-events: none;
+}
+#wedding-transition span {
+  padding: .22em .42em;
+  border-block: 1px solid var(--gold-edge);
+  color: #e4cb95;
+  font: italic clamp(52px, 10vw, 88px)/1.1 var(--serif);
+}
+#wedding-transition i { font-size: .63em; color: #bc995a; }
+@media (prefers-reduced-motion: reduce) {
+  #wedding-transition { display: none; }
+}
