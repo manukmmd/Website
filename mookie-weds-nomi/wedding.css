@@ -167,7 +167,6 @@ details[open] summary span{transform:rotate(45deg)}
   .hero{min-height:780px;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:44px max(4vw,34px) 70px;gap:4vw}
   .hero-copy{text-align:left;padding:40px 0 50px;margin-left:auto;width:min(100%,560px)}
   .hero h1{align-items:flex-start;font-size:clamp(76px,8.8vw,137px)}
-  .hero h1 em{margin-left:30%}
   .hero-rule{margin:28px 0 7px}
   .hero-intro{margin:0 0 30px;max-width:390px}
   .hero-visual{width:min(100%,600px);margin:0 auto;padding:0}
@@ -250,7 +249,7 @@ body{background:var(--ivory)}
   letter-spacing:-.048em;margin:0 auto!important;white-space:normal;display:block;
   text-shadow:0 1px 8px rgba(0,0,0,.13)
 }
-.hero .wedding-hero-title em{font-style:italic;color:#d6b675;letter-spacing:0;font-size:.92em}
+.hero .wedding-hero-title em{margin:0;font-style:italic;color:#d6b675;letter-spacing:0;font-size:.92em}
 .hero-gold-divider{display:block;color:#e7ba75;font-size:15px;line-height:1;margin:22px auto 13px}
 .hero-date-full{color:#f8f3ee;letter-spacing:.22em;font-size:11px;font-weight:700;text-transform:uppercase;margin:0}
 .hero .hero-place{color:#f7ece4;font-size:10px;letter-spacing:.25em;margin:11px 0 23px;text-transform:uppercase}
@@ -308,7 +307,7 @@ body{background:var(--ivory)}
   .topbar .brand-mark{font-size:30px}
   .topbar .nav-links{display:flex!important;gap:30px}
   .nav-mobile-actions{display:none}
-  .hero{min-height:660px;padding:115px 125px!important}
+  .hero{min-height:660px;padding:clamp(64px, 8vh, 86px) 100px!important}
   .hero::before{inset:32px}.hero::after{inset:39px}
   .hero-florals::before{width:405px;height:455px;top:-10px;left:-24px}
   .hero-florals::after{width:390px;height:400px;bottom:-18px;right:-28px}
@@ -402,6 +401,7 @@ body{background:var(--ivory)}
   line-height:1.15!important;
   white-space:nowrap!important;
   letter-spacing:-.045em!important;
+  padding-inline:.08em;
 }
 .hero-inner{max-width:980px!important}
 @media(min-width:600px){
