@@ -527,7 +527,7 @@ body.invitation-preview-locked{overflow:hidden}
   color: white;
 }
 .day-card-soon {
-  background-image: linear-gradient(180deg, rgba(11,20,32,.72), rgba(11,20,32,.22) 28%, rgba(11,20,32,.86) 61%), url("poruwa.webp");
+  background-image: linear-gradient(180deg, rgba(11,20,32,.72), rgba(11,20,32,.22) 28%, rgba(11,20,32,.86) 61%), url("ceremony-rings.webp");
   justify-content: flex-end;
 }
 .day-card-feature {
