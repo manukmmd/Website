@@ -68,6 +68,27 @@
   pinInput.minLength = 7;
   pinInput.pattern = "[0-9]{7}";
 
+  const monogram = $("wedding-transition");
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+  function showMonogram() {
+    if (!monogram || reduceMotion.matches || !monogram.animate) return;
+    for (const animation of monogram.getAnimations()) animation.cancel();
+    monogram.animate([
+      { opacity: 0 },
+      { opacity: 1, offset: 0.18 },
+      { opacity: 1, offset: 0.55 },
+      { opacity: 0 }
+    ], { duration: 740, easing: "ease-in-out" });
+  }
+
+  document.addEventListener("click", event => {
+    const link = event.target.closest?.('a[href^="#"]');
+    if (!link || link.classList.contains("skip-link") || event.button !== 0 ||
+        event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    if (document.getElementById(link.hash.slice(1))) showMonogram();
+  });
+
   let activeInvitation = null;
 
   const setSiteInert = (isLocked) => {
@@ -78,6 +99,7 @@
   setSiteInert(true);
 
   function openPinScreen() {
+    showMonogram();
     document.body.classList.add("invitation-preview-locked");
     setSiteInert(true);
     gate.hidden = false;
@@ -125,6 +147,7 @@
       ...invitation.adults,
       ...invitation.children.map(child => child.name)
     ].join(", ") + ".";
+    showMonogram();
     pinEntry.hidden = true;
     pinWelcome.hidden = false;
     greeting.focus();
@@ -243,6 +266,7 @@
 
   enter.addEventListener("click", () => {
     if (!activeInvitation) return;
+    showMonogram();
     setupInvitation();
     gate.hidden = true;
     document.body.classList.remove("invitation-preview-locked");
