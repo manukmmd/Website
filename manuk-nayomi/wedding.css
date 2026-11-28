@@ -632,12 +632,12 @@ body.invitation-preview-locked{overflow:hidden}
 /* Invitation stationery dividers */
 .invitation-ornament {
   display: block;
-  width: min(205px, 68%);
-  height: 22px;
+  width: min(300px, 78%);
+  height: 30px;
   margin: 16px auto 20px;
-  background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20240%2024%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22foil%22%3E%3Cstop%20stop-color%3D%22%2398753a%22%2F%3E%3Cstop%20offset%3D%22.32%22%20stop-color%3D%22%23d7bd82%22%2F%3E%3Cstop%20offset%3D%22.53%22%20stop-color%3D%22%23ae8947%22%2F%3E%3Cstop%20offset%3D%22.8%22%20stop-color%3D%22%23dec792%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%2398753a%22%2F%3E%3C%2FlinearGradient%3E%3Cg%20id%3D%22sprig%22%3E%3Cpath%20d%3D%22M5%2012h102%22%20fill%3D%22none%22%20stroke%3D%22url(%23foil)%22%20stroke-width%3D%221.2%22%2F%3E%3Cpath%20d%3D%22M9%2012Q4%207%200%2012q4%204%209%200Zm10%200Q13%204%209%204q1%206%2010%208Zm9%200q-7%208-13%208%202-6%2013-8Z%22%20fill%3D%22url(%23foil)%22%2F%3E%3C%2Fg%3E%3C%2Fdefs%3E%3Cuse%20href%3D%22%23sprig%22%2F%3E%3Cuse%20href%3D%22%23sprig%22%20transform%3D%22translate(240%200)%20scale(-1%201)%22%2F%3E%3Cpath%20d%3D%22M120%2018c-2-2-7-5.7-7-9.2%200-3.5%204.7-5.1%207-1.4%202.3-3.7%207-2.1%207%201.4%200%203.5-5%207.2-7%209.2Z%22%20fill%3D%22url(%23foil)%22%2F%3E%3C%2Fsvg%3E") center / contain no-repeat;
+  background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20320%2032%22%3E%3Cdefs%3E%3Cg%20id%3D%22branch%22%20fill%3D%22%23c4a263%22%3E%3Cpath%20d%3D%22M6%2016H144%22%20fill%3D%22none%22%20stroke%3D%22%23bf9b5d%22%20stroke-width%3D%221.8%22%2F%3E%3Cpath%20d%3D%22M6%2016q6-5%2012%200-6%205-12%200zm20%200Q17%2014%2016%206q9%201%2010%2010zm8%200q-5%209-14%209%203-8%2014-9zm12%200Q36%2012%2035%204q9%203%2011%2012zm8%200q-5%209-14%2010%203-9%2014-10z%22%2F%3E%3Cpath%20d%3D%22m133%2016%204-2.7%204%202.7-4%202.7z%22%2F%3E%3C%2Fg%3E%3C%2Fdefs%3E%3Cuse%20href%3D%22%23branch%22%2F%3E%3Cuse%20href%3D%22%23branch%22%20transform%3D%22translate(320%200)%20scale(-1%201)%22%2F%3E%3Cpath%20fill%3D%22%23c4a263%22%20d%3D%22M160%2024c-2-2-8-6-8-10%200-5%206-6%208-2%203-4%208-3%208%202%200%204-6%209-8%2010Z%22%2F%3E%3C%2Fsvg%3E") center / contain no-repeat;
 }
 .schedule-intro .invitation-ornament, .faq-layout .invitation-ornament { margin-left: 0; }
 @media (max-width: 600px) {
-  .invitation-ornament { width: min(176px, 68%); }
+  .invitation-ornament { width: min(260px, 78%); }
 }
