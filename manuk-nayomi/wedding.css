@@ -537,3 +537,43 @@ body.invitation-preview-locked{overflow:hidden}
 .day-card .card-eyebrow, .day-card h3 em { color: #ffe3b4; }
 .day-card .card-number, .day-card .coming-label { border-color: #d3baa0; }
 .day-card .button-outline { background: #fff9ef; color: #162335; border-color: #fff9ef; }
+
+/* Champagne on navy, antique gold on ivory. */
+:root {
+  --champagne: #f2d6aa;
+  --antique-gold: #79561f;
+  --gold-edge: #c39a58;
+}
+.topbar, .quick-links, .personal-invitation, .day-summary, .travel-card,
+.rsvp-panel, .faq-list details, .travel-notes details, .photo-slot {
+  border-color: var(--gold-edge);
+}
+.topbar .brand-mark em, .topbar .nav-links a, .mobile-menu nav a,
+.quick-links span, .day-summary strong, .travel-action, .travel-icon,
+.section h2 em, .section-head .kicker, .welcome .kicker, .rsvp-heading .kicker,
+.personal-invitation .kicker, .form-group legend, .form-group legend span,
+.dress-section .kicker, .gallery-section .kicker, .faq-section .kicker,
+.travel-section .kicker, .travel-notes summary span, .faq-list summary span {
+  color: var(--antique-gold);
+}
+.quick-links svg { stroke: var(--antique-gold); }
+.nav-rsvp, .nav-rsvp:hover, .day-card .button-outline,
+.hero .hero-button, .gate-button, .closing .button {
+  color: #192538;
+  border-color: var(--gold-edge);
+  background: linear-gradient(115deg, #f9e9ca, #e6c185 58%, #f2d8ac);
+}
+.gate-brand, .gate-panel h2 em, .gate-kicker, .hero-overline,
+.hero .hero-date-full, .hero .hero-place, .day-card h3, .day-card .card-time,
+.schedule-section h2 em, .timeline h3, .timeline time, .closing h2 em,
+.closing-script, .site-footer span:first-child {
+  color: var(--champagne);
+}
+.timeline::before { background: var(--gold-edge); }
+.timeline-dot { background: var(--champagne); border-color: var(--gold-edge); }
+.rsvp-notice, .invitation-rsvp-note, .rsvp-preview-result, .invited-choice:has(input:checked) {
+  background: #fbf2df;
+  border-color: var(--gold-edge);
+}
+.choice input, .invited-choice input { accent-color: var(--antique-gold); }
+.site-footer { border-top: 1px solid var(--gold-edge); }
