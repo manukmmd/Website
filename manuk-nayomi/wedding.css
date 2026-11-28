@@ -197,8 +197,8 @@ details[open] summary span{transform:rotate(45deg)}
 :root{
   --navy:#10223a;
   --deep:#0d1c30;
-  --gold:#ad813f;
-  --gold-light:#f0c98e;
+  --gold:#765700;
+  --gold-light:#f5c638;
   --cream:#fbf3eb;
   --ivory:#fff9f2;
 }
@@ -250,13 +250,13 @@ body{background:var(--ivory)}
   letter-spacing:-.048em;margin:0 auto!important;white-space:normal;display:block;
   text-shadow:0 1px 8px rgba(0,0,0,.13)
 }
-.hero .wedding-hero-title em{font-style:italic;color:#e6ae65;letter-spacing:0;font-size:.92em}
+.hero .wedding-hero-title em{font-style:italic;color:#f5c638;letter-spacing:0;font-size:.92em}
 .hero-gold-divider{display:block;color:#e7ba75;font-size:15px;line-height:1;margin:22px auto 13px}
 .hero-date-full{color:#f8f3ee;letter-spacing:.22em;font-size:11px;font-weight:700;text-transform:uppercase;margin:0}
 .hero .hero-place{color:#f7ece4;font-size:10px;letter-spacing:.25em;margin:11px 0 23px;text-transform:uppercase}
 .hero .hero-intro{color:#f9f4ed;font:italic 17px/1.6 var(--serif);max-width:360px;margin:0 auto 26px}
 .hero .hero-button{
-  background:linear-gradient(105deg,#f7e0b6,#eec391)!important;color:#15243c!important;
+  background:linear-gradient(105deg,#ffe28b,#edbc2e 55%,#ffd960)!important;color:#15243c!important;
   font-size:12px;letter-spacing:.24em;min-width:139px;min-height:47px;margin:0;
   border:1px solid #ffe3ad;box-shadow:0 4px 16px rgba(0,0,0,.1)
 }
@@ -538,11 +538,11 @@ body.invitation-preview-locked{overflow:hidden}
 .day-card .card-number, .day-card .coming-label { border-color: #d3baa0; }
 .day-card .button-outline { background: #fff9ef; color: #162335; border-color: #fff9ef; }
 
-/* Champagne on navy, antique gold on ivory. */
+/* Yellow gold on navy, deep gold on ivory. */
 :root {
-  --champagne: #f2d6aa;
-  --antique-gold: #79561f;
-  --gold-edge: #c39a58;
+  --yellow-gold: #f5c638;
+  --antique-gold: #765700;
+  --gold-edge: #ce9b18;
 }
 .topbar, .quick-links, .personal-invitation, .day-summary, .travel-card,
 .rsvp-panel, .faq-list details, .travel-notes details, .photo-slot {
@@ -561,19 +561,24 @@ body.invitation-preview-locked{overflow:hidden}
 .hero .hero-button, .gate-button, .closing .button {
   color: #192538;
   border-color: var(--gold-edge);
-  background: linear-gradient(115deg, #f9e9ca, #e6c185 58%, #f2d8ac);
+  background: linear-gradient(115deg, #ffe28b, #edbc2e 55%, #ffd960);
 }
-.gate-brand, .gate-panel h2 em, .gate-kicker, .hero-overline,
+.gate-brand, .gate-brand em, .gate-rule, .gate-date, .gate-panel label[for="invite-pin"],
+.hero-gold-divider, .day-card .card-eyebrow, .day-card h3 em, .gate-panel h2 em, .gate-kicker, .hero-overline,
 .hero .hero-date-full, .hero .hero-place, .day-card h3, .day-card .card-time,
 .schedule-section h2 em, .timeline h3, .timeline time, .closing h2 em,
 .closing-script, .site-footer span:first-child {
-  color: var(--champagne);
+  color: var(--yellow-gold);
 }
 .timeline::before { background: var(--gold-edge); }
-.timeline-dot { background: var(--champagne); border-color: var(--gold-edge); }
+.timeline-dot { background: var(--yellow-gold); border-color: var(--gold-edge); }
 .rsvp-notice, .invitation-rsvp-note, .rsvp-preview-result, .invited-choice:has(input:checked) {
   background: #fbf2df;
   border-color: var(--gold-edge);
 }
 .choice input, .invited-choice input { accent-color: var(--antique-gold); }
 .site-footer { border-top: 1px solid var(--gold-edge); }
+
+.invite-gate::before, .invite-gate::after, #invite-pin, .demo-pin-options button,
+.hero::before, .hero::after, .gate-demo { border-color: var(--gold-edge); }
+.demo-pin-options button:hover, .demo-pin-options button:focus-visible { background: var(--yellow-gold); color: var(--deep); }
